@@ -37,18 +37,20 @@ public class Yard extends Frame {
     Yard() {
         this.setSize(AreaSize * 2, AreaSize * 2);
         this.setTitle("贪吃蛇");
+        this.setResizable(false);
         this.setVisible(true);
-        this.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-            }
-        });
 
         this.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
                 snake.keyPressed(e);
+            }
+        });
+
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
             }
         });
     }
