@@ -8,15 +8,12 @@ package com.mashibing.snake;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Yard yard = new Yard();
+
         while (true) {
-            try {
-                yard.repaint();
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            Thread.sleep(100);
+            yard.repaint();
         }
     }
 }
